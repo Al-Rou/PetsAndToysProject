@@ -26,7 +26,7 @@ public class PetsAndToys {
         int[] T = {1, 1, 1, 1, 2, 2, 2, 2};
         int[] A = {0, 1, 2, 3, 4, 5, 6};
         int[] B = {1, 2, 3, 4, 5, 6, 7};
-        
+
         System.out.println(s.solution(P, T, A, B));
     }
 }
