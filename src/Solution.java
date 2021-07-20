@@ -3,6 +3,35 @@ import java.util.HashSet;
 public class Solution {
     public boolean solution(int[] P, int[] T, int[] A, int[] B)
     {
+        //Check the arguments to see if they are valid according to the assumptions
+        if((P.length != T.length) || (A.length != B.length))
+        {
+            System.out.println("Entered arguments are not valid according to the assumptions!");
+            return false;
+        }
+        for(int i = 0; i < A.length; i++)
+        {
+            if((A[i] >= P.length) || (B[i] >= P.length))
+            {
+                System.out.println("Entered A and/or B are not valid according to the assumptions!");
+                return false;
+            }
+        }
+        for(int i = 0; i < P.length; i++)
+        {
+            if((P[i] != 1) && (P[i] != 2))
+            {
+                System.out.println("Entered P is not valid according to the assumptions!");
+                return false;
+            }
+            else if((T[i] != 1) && (T[i] != 2))
+            {
+                System.out.println("Entered T is not valid according to the assumptions!");
+                return false;
+            }
+        }
+        //End of checking
+
         //UnionFind is used to determine whether people with wrong toys are connected to each other or not!
         int[] unionFind = new int[P.length];
         //UnionFind is initialised here
